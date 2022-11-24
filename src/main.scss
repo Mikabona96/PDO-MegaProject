@@ -3,9 +3,19 @@
 
 // MarkerGen import elements styles
 // MarkerGen import components styles
+@import './components/FourthSection/index.scss';
+@import './components/ThirdSection/index.scss';
+@import './components/SecondSection/index.scss';
+@import './components/FirstSection/index.scss';
 @import './components/Header/index.scss';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: gray;
+    // background-color: gray;
 }
 

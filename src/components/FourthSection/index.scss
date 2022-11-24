@@ -1,0 +1,119 @@
+@import '../../assets/variables.scss';
+@import '../../assets/fonts.scss';
+
+.fourthsection {
+    width: $section-width;
+    height: $section-height;
+    margin: auto;
+    position: relative;
+    & .title {
+        position: absolute;
+        top: 88px;
+        left: 48px;
+        width: 517px;
+        font-family: $lexend;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        /* White */
+
+        color: #FFFFFF;
+    }
+    & .form-wrapper {
+        width: 632px;
+        height: 674px;
+        position: absolute;
+        top: 88px;
+        right: 48px;
+        background: #fff;
+        padding: 48px;
+        & .form-title {
+            font-family: $lexend;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 24px;
+            /* identical to box height, or 75% */
+
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            margin: 0;
+
+            /* Text color */
+
+            color: #000000;
+        }
+        & .form-description {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+            margin: 0;
+            margin-top: 28px;
+            margin-bottom: 32px;
+            /* Text color */
+
+            color: #000000;
+        }
+        & .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .input {
+                padding: 0px 16px;
+                width: 100%;
+                height: 48px;
+                background: #F4F4F4;
+                border: none;
+                margin-bottom: 24px;
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                &::placeholder {
+                    color: #000000;
+                }
+            }
+            & .comment {
+                padding: 15px 16px 0px;
+                width: 100%;
+                height: 154px;
+                background: #F4F4F4;
+                resize: none;
+                border: none;
+                margin-bottom: 24px;
+                &::placeholder {
+                    font-family: $inter;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #000000;
+                }
+            }
+            & .btn {
+                padding: 0px 24px;
+                width: fit-content;
+                height: 48px;
+                background: #019748;
+                border: none;
+                color: white;
+                font-family: $readex;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                align-self: baseline;
+            }
+        }
+    }
+}
