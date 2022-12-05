@@ -1,6 +1,87 @@
 @import '../../assets/variables.scss';
 @import '../../assets/fonts.scss';
 
+
+@media (max-width: 1359px) {
+    .firstsection {
+        width: 100%;
+        height: 800px;
+        position: relative;
+        overflow: hidden;
+        & .section-bg {
+            position: absolute;
+            width: 1360px;
+            height: 880px;
+            top: -80px;
+            left: 0;
+        }
+        & .title {
+            position: absolute;
+            bottom: 233px;
+            left: 48px;
+            font-family: "Lexend", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 44px;
+            display: flex;
+            align-items: flex-end;
+            text-transform: uppercase;
+            background: linear-gradient(285.37deg, #FFFFFF 37.36%, #019748 183.93%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        & .description {
+            position: absolute;
+            width: 306px;
+            bottom: 24px;
+            left: 48px;
+            font-family: $inter;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .firstsection {
+        & .section-bg {
+            left: -118px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .firstsection {
+        height: 667px;
+        & .section-bg {
+            width: 957px;
+            height: 669px;
+            top: 0px;
+            left: -154px;
+        }
+        & .title {
+            position: absolute;
+            bottom: 140px;
+            left: 24px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+        & .description {
+            width: 306px;
+            bottom: 24px;
+            left: 24px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #FFFFFF;
+        }
+    }
+}
+
 @media (min-width: 1360px) {
     .firstsection {
         width: $section-width;

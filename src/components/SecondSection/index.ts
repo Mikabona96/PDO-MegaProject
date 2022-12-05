@@ -1,4 +1,5 @@
 import '../../assets/img/2nd-section-slide-img.png';
+import '../../assets/img/2nd-section-slide-img2.png';
 import '../../assets/img/2nd-section-slide-img3.png';
 import '../../assets/img/arrow.png';
 
