@@ -9,40 +9,47 @@
         overflow: hidden;
         & .title {
             position: absolute;
-            top: 3%;
             left: 48px;
+            top: 48px;
             width: 110px;
             font-family: $lexend;
             font-style: normal;
             font-weight: 500;
-            font-size: 32px;
-            line-height: 40px;
+            font-size: 28px;
+            line-height: 35px;
             display: flex;
             align-items: center;
             text-transform: uppercase;
             color: #000000;
         }
         & .slider {
-            width: 100%;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             left: 48px;
+            top: 45%;
+            transform: translateY(-45%);
+            overflow: hidden;
             & .slides-wrapper {
                 display: flex;
                 transition: 1s ease;
                 & .slide {
-                    position: relative;
-                    flex-shrink: 0;
-                    width: 80%;
-                    height: fit-content;
+                    width: 780px;
+                    height: 477px;
                     margin-right: 40px;
+                    position: relative;
                     overflow: hidden;
+                    & .image-wrapper {
+                        position: relative;
+                        & .slide-img {
+                            position: absolute;
+                            width: 825px;
+                            height: 477px;
+                        }
+                    }
                     & .status {
                         padding: 8px 24px;
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
+                        top: 24px;
+                        right: 24px;
                         width: 134px;
                         height: 44px;
                         font-family: $inter;
@@ -54,52 +61,53 @@
                         border-radius: 10px;
                         color: #FFFFFF;
                     }
-                    & .slide-img {
-                        width: 100%;
-                    }
                     & .title {
-                        top: auto;
                         position: absolute;
-                        height: fit-content;
                         left: 24px;
-                        bottom: 180px;
-                        width: 567px;
+                        top: auto;
+                        bottom: 170px;
+                        width: 327px;
+                        height: fit-content;
+                        margin-top: 16px;
                         font-family: $lexend;
                         font-style: normal;
                         font-weight: 500;
                         font-size: 28px;
                         line-height: 35px;
                         text-transform: uppercase;
-                        color: #FFFFFF;
+                        color: #ffff;
+
                     }
                     & .description {
                         position: absolute;
-                        height: fit-content;
+                        bottom: 100px;
                         left: 24px;
-                        bottom: 108px;
-                        width: 541px;
+                        margin-top: 8px;
+                        width: 327px;
+                        height: 57px;
                         font-family: $inter;
                         font-style: normal;
                         font-weight: 400;
                         font-size: 16px;
-                        line-height: 28px;
-                        color: #FFFFFF;
+                        line-height: 19px;
+                        color: #fff;
                     }
                     & .slide-link {
                         & .btn {
                             position: absolute;
-                            bottom: 30px;
+                            bottom: 24px;
                             left: 24px;
-                            width: 110px;
-                            height: 49px;
+                            margin-top: 8px;
+                            padding: 0px 24px;
+                            width: 132px;
+                            height: 48px;
                             background: #019748;
                             border: 0;
-                            font-family: "Lexend", sans-serif;
+                            font-family: $readex;
                             font-style: normal;
                             font-weight: 400;
-                            font-size: 18px;
-                            line-height: 23px;
-                            text-transform: uppercase;
+                            font-size: 16px;
+                            line-height: 24px;
                             color: #FFFFFF;
                         }
                     }
@@ -107,7 +115,76 @@
             }
         }
         & .navigation {
-            width: 280px;
+            width: 230px;
+            height: 48px;
+            position: absolute;
+            bottom: 48px;
+            right: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & .nav-buttons {
+                width: fit-content;
+                display: flex;
+                justify-content: space-between;
+                & .nav-btn {
+                    width: 16px;
+                    height: 4px;
+                    background: rgba(237, 207, 101, 0.5);
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .3s ease;
+                    margin-right: 8px;
+                }
+                & .nav-btn.active {
+                    width: 40px;
+                    height: 4px;
+                    background: #EDCF65;
+                    border-radius: 5px;
+                }
+            }
+            & .arrows {
+                display: flex;
+                width: 104px;
+                justify-content: space-between;
+                & .arrow {
+                    width: 48px;
+                    height: 48px;
+                    cursor: pointer;
+                }
+                & .right-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .secondsection {
+        & .slider {
+            & .slides-wrapper {
+                display: flex;
+                transition: 1s ease;
+                & .slide {
+                    width: 625px;
+                    height: 380px;
+                    margin-right: 40px;
+                    position: relative;
+                    overflow: hidden;
+                    & .image-wrapper {
+                        position: relative;
+                        & .slide-img {
+                            position: absolute;
+                            width: 617px;
+                            height: 380px;
+                        }
+                    }
+                }
+            }
+        }
+        & .navigation {
+            width: 230px;
             height: 48px;
             position: absolute;
             bottom: 48px;
@@ -160,30 +237,24 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        background: brown;
         & .title {
             position: unset;
             width: 110px;
-            font-family: $lexend;
-            font-style: normal;
-            font-weight: 500;
             font-size: 18px;
             line-height: 22px;
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
             color: #000000;
         }
         & .slider {
             position: unset;
             transform: translateY(0);
             margin-top: 75px;
+            overflow: unset;
             & .slides-wrapper {
-                display: flex;
                 flex-direction: row;
-                transition: 1s ease;
                 & .slide {
+                    flex-shrink: 0;
                     width: 327px;
+                    height: auto;
                     margin-right: 40px;
                     position: relative;
                     & .image-wrapper {
@@ -199,61 +270,20 @@
                             left: -156px;
                         }
                     }
-                    & .status {
-                        padding: 8px 24px;
-                        position: absolute;
-                        top: 16px;
-                        right: 16px;
-                        width: 134px;
-                        height: 44px;
-                        font-family: $inter;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 16px;
-                        line-height: 28px;
-                        border: 1px solid #fff;
-                        border-radius: 10px;
-                        color: #FFFFFF;
-                    }
                     & .title {
                         position: unset;
                         width: 327px;
                         margin-top: 16px;
-                        font-family: $lexend;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 28px;
-                        line-height: 35px;
-                        text-transform: uppercase;
                         color: #000000;
                     }
                     & .description {
                         position: unset;
                         margin-top: 8px;
-                        width: 327px;
-                        height: 57px;
-                        font-family: $inter;
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 19px;
                         color: #000000;
                     }
                     & .slide-link {
                         & .btn {
                             position: unset;
-                            margin-top: 8px;
-                            padding: 0px 24px;
-                            width: 132px;
-                            height: 48px;
-                            background: #019748;
-                            border: 0;
-                            font-family: $readex;
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 24px;
-                            color: #FFFFFF;
                         }
                     }
                 }
@@ -341,6 +371,7 @@
             position: absolute;
             top: 151px;
             left: 48px;
+            overflow: hidden;
             & .slides-wrapper {
                 display: flex;
                 transition: 1s ease;
