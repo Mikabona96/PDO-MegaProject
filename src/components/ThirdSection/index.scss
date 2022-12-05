@@ -5,11 +5,12 @@
 @media (min-width: 1360px) {
     .thirdsection {
         width: $section-width;
-        height: $section-height;
+        height: 860px;
         margin: auto;
         & .card-wrapper {
             display: flex;
             & .card {
+                overflow: hidden;
                 position: relative;
                 & .card-title {
                     position: absolute;
@@ -63,6 +64,16 @@
                         text-transform: uppercase;
                         color: #FFFFFF;
                         text-decoration: none;
+                    }
+                }
+                & .card-img {
+                    scale: 1;
+                    transition: 1s ease;
+                }
+                &:hover {
+                    & .card-img {
+                        scale: 1.1;
+                        transition: 1s ease;
                     }
                 }
             }
