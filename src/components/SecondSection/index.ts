@@ -23,7 +23,7 @@ export const secondSectionFunction = () => {
         };
 
         const goToSlide = () => {
-            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index * slideWidth}px)`;
+            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index * (slideWidth + 40)}px)`;
         };
 
         rightArrow?.addEventListener('click', () => {
