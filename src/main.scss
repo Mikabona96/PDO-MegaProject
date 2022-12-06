@@ -3,6 +3,8 @@
 
 // MarkerGen import elements styles
 // MarkerGen import components styles
+@import './components/Header/index.scss';
+@import './components/Footer/index.scss';
 @import './components/FourthSection/index.scss';
 @import './components/ThirdSection/index.scss';
 @import './components/SecondSection/index.scss';
@@ -19,3 +21,6 @@ body {
     // background-color: gray;
 }
 
+#main {
+    position: relative;
+}
