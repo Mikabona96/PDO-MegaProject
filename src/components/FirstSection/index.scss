@@ -45,6 +45,17 @@
             color: #FFFFFF;
         }
     }
+    .firstsection.rtl {
+        & .title {
+            left: auto;
+            right: 48px;
+        }
+        & .description {
+            left: auto;
+            right: 48px;
+            text-align: end;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -78,6 +89,14 @@
             font-size: 12px;
             line-height: 18px;
             color: #FFFFFF;
+        }
+    }
+    .firstsection.rtl {
+        & .title {
+            right: 24px;
+        }
+        & .description {
+            right: 24px;
         }
     }
 }
@@ -127,6 +146,17 @@
             margin: 0;
             line-height: 24px;
             color: #FFFFFF;
+        }
+    }
+    .firstsection.rtl {
+        & .title {
+            left: auto;
+            right: 48px;
+        }
+        & .description {
+            left: auto;
+            right: 48px;
+            text-align: end;
         }
     }
 }
