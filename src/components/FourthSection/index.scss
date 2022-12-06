@@ -246,10 +246,12 @@
 
 @media (min-width: 1360px) {
     .fourthsection {
-        width: $section-width;
-        height: $section-height;
-        margin: auto;
+        width: 100%;
+        height: 100%;
         position: relative;
+        & .section-bg {
+            width: 100%;
+        }
         & .title {
             position: absolute;
             top: 88px;

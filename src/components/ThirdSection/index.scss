@@ -177,14 +177,19 @@
 
 @media (min-width: 1360px) {
     .thirdsection {
-        width: $section-width;
-        height: 860px;
-        margin: auto;
+        width: 100%;
+        height: 100vh;
         & .card-wrapper {
             display: flex;
+            margin: 0 auto;
+            width: fit-content;
+            height: 100%;
+            align-items: center;
             & .card {
                 overflow: hidden;
                 position: relative;
+                width: 680px;
+                height: 860px;
                 & .card-title {
                     position: absolute;
                     top: 610px;

@@ -1,3 +1,4 @@
+import { idx, rtl } from '../..';
 import '../../assets/img/2nd-section-slide-img.png';
 import '../../assets/img/2nd-section-slide-img2.png';
 import '../../assets/img/2nd-section-slide-img3.png';
@@ -11,37 +12,36 @@ export const secondSectionFunction = () => {
         const slidesWrapper = (document.querySelector('.secondsection .slider .slides-wrapper')) as HTMLElement;
         const slide = (document.querySelector('.secondsection .slider .slides-wrapper .slide')) as HTMLElement;
         const slides = document.querySelectorAll('.secondsection .slider .slides-wrapper .slide');
+        const header = document.querySelector('.Header');
+        const headerContent = document.querySelector('.header-content');
         let slideWidth = slide.offsetWidth;
-        let index = 0;
-        let rtl = true;
+        let index = idx;
 
 
         const removeActiveBtn = () => {
             buttons.forEach((btn, i) => {
-                i === index ? btn.classList.add('active') : btn.classList.remove('active');
+                i === index.value ? btn.classList.add('active') : btn.classList.remove('active');
             });
         };
 
         const goToSlide = () => {
-            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index * (slideWidth + 40)}px)`;
+            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index.value * (slideWidth + 40)}px)`;
         };
 
         rightArrow?.addEventListener('click', () => {
-            index >= slides.length - 1 ? index = slides.length - 1 : index += 1;
+            index.value >= slides.length - 1 ? index.value = slides.length - 1 : index.value += 1;
             removeActiveBtn();
             goToSlide();
-            console.log(index);
         });
         leftArrow?.addEventListener('click', () => {
-            index <= 0 ? index = 0 : index -= 1;
+            index.value <= 0 ? index.value = 0 : index.value -= 1;
             removeActiveBtn();
             goToSlide();
-            console.log(index);
         });
 
         buttons.forEach((btn, i) => {
             btn.addEventListener('click', () => {
-                index = i;
+                index.value = i;
                 goToSlide();
                 removeActiveBtn();
             });
@@ -76,32 +76,32 @@ export const secondSectionFunction = () => {
             moving = false;
             if (rtl) {
                 if (diff > 0) {
-                    index += 1;
-                    if (buttons && index >= buttons?.length - 1) {
-                        index = buttons.length - 1;
+                    index.value += 1;
+                    if (buttons && index.value >= buttons?.length - 1) {
+                        index.value = buttons.length - 1;
                     }
-                    slidesWrapper.style.transform = `translateX(${(slideWidth + 40) * index}px)`;
+                    slidesWrapper.style.transform = `translateX(${(slideWidth + 40) * index.value}px)`;
                 } else {
-                    index -= 1;
-                    if (index < 0) {
-                        index = 0;
+                    index.value -= 1;
+                    if (index.value < 0) {
+                        index.value = 0;
                     }
-                    slidesWrapper.style.transform = `translateX(${(slideWidth + 40) * index}px)`;
+                    slidesWrapper.style.transform = `translateX(${(slideWidth + 40) * index.value}px)`;
                 }
                 removeActiveBtn();
             } else {
                 if (diff < 0) {
-                    index += 1;
-                    if (buttons && index >= buttons?.length - 1) {
-                        index = buttons.length - 1;
+                    index.value += 1;
+                    if (buttons && index.value >= buttons?.length - 1) {
+                        index.value = buttons.length - 1;
                     }
-                    slidesWrapper.style.transform = `translateX(-${(slideWidth + 40) * index}px)`;
+                    slidesWrapper.style.transform = `translateX(-${(slideWidth + 40) * index.value}px)`;
                 } else {
-                    index -= 1;
-                    if (index < 0) {
-                        index = 0;
+                    index.value -= 1;
+                    if (index.value < 0) {
+                        index.value = 0;
                     }
-                    slidesWrapper.style.transform = `translateX(-${(slideWidth + 40) * index}px)`;
+                    slidesWrapper.style.transform = `translateX(-${(slideWidth + 40) * index.value}px)`;
                 }
                 removeActiveBtn();
             }
@@ -119,9 +119,9 @@ export const secondSectionFunction = () => {
         }
 
         window.addEventListener('resize', debounce(function() {
-            // header?.classList.remove('active');
-            // headerContent?.classList.remove('active');
-            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index * (slideWidth + 40)}px)`;
+            header?.classList.remove('active');
+            headerContent?.classList.remove('active');
+            slidesWrapper.style.transform = `translateX(${rtl ? '' : '-'}${index.value * (slideWidth + 40)}px)`;
         }, 400));
     });
 };

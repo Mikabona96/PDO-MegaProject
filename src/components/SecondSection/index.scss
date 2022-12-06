@@ -418,8 +418,8 @@
 
 @media (min-width: 1360px) {
     .secondsection {
-        width: $section-width;
-        height: $section-height;
+        width: 100%;
+        height: 100vh;
         position: relative;
         margin: auto;
         overflow: hidden;
@@ -440,7 +440,7 @@
         }
         & .slider {
             width: 100%;
-            height: 100%;
+            height: fit-content;
             position: absolute;
             top: 151px;
             left: 48px;
@@ -455,8 +455,8 @@
                     width: 1128px;
                     height: 589px;
                     & .slide-img {
-                        width: 100%;
-                        height: 100%;
+                        width: 1128px;
+                        height: 589px;
                     }
                     & .status {
                         position: absolute;
