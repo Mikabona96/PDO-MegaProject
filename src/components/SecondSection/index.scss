@@ -377,6 +377,9 @@
         }
     }
     .secondsection.rtl {
+        & .title {
+            margin-left: auto;
+        }
         & .slider {
             & .slides-wrapper {
                 & .slide {
