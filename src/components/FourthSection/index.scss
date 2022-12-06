@@ -40,6 +40,7 @@
             background: #fff;
             padding: 24px;
             & .form-title {
+                width: fit-content;
                 font-family: $lexend;
                 font-style: normal;
                 font-weight: 500;
@@ -124,6 +125,34 @@
             }
         }
     }
+    .fourthsection.rtl {
+        & .title {
+            left: auto;
+            right: 48px;
+            text-align: end;
+        }
+        & .form-wrapper {
+            right: auto;
+            left: 48px;
+            & .form-title {
+                margin-left: auto;
+            }
+            & .form-description {
+                text-align: end;
+            }
+            & .form {
+                & .input {
+                    text-align: end;
+                }
+                & .comment {
+                    text-align: end;
+                }
+                & .btn {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -148,6 +177,34 @@
             transform: translate(-50%, -50%);
             background: #fff;
             padding: 24px;
+        }
+    }
+    .fourthsection.rtl {
+        & .title {
+            left: auto;
+            right: 24px;
+            text-align: end;
+        }
+        & .form-wrapper {
+            right: auto;
+            left: 50%;
+            & .form-title {
+                margin-left: auto;
+            }
+            & .form-description {
+                text-align: end;
+            }
+            & .form {
+                & .input {
+                    text-align: end;
+                }
+                & .comment {
+                    text-align: end;
+                }
+                & .btn {
+                    margin-left: auto;
+                }
+            }
         }
     }
 }
@@ -220,6 +277,7 @@
             background: #fff;
             padding: 48px;
             & .form-title {
+                width: fit-content;
                 font-family: $lexend;
                 font-style: normal;
                 font-weight: 500;
@@ -300,6 +358,34 @@
                     font-size: 16px;
                     line-height: 24px;
                     align-self: baseline;
+                }
+            }
+        }
+    }
+    .fourthsection.rtl {
+        & .title {
+            left: auto;
+            right: 48px;
+            text-align: end;
+        }
+        & .form-wrapper {
+            right: auto;
+            left: 48px;
+            & .form-title {
+                margin-left: auto;
+            }
+            & .form-description {
+                text-align: end;
+            }
+            & .form {
+                & .input {
+                    text-align: end;
+                }
+                & .comment {
+                    text-align: end;
+                }
+                & .btn {
+                    margin-left: auto;
                 }
             }
         }
