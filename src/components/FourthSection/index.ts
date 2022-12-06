@@ -2,16 +2,10 @@ import '../../assets/img/4th-section-bg.png';
 
 export const fourthSectionFunction = () => {
     const data = {
-        name:         '',
-        phone:        '',
-        email:        '',
-        comment:      '',
-        setToInitial: function () {
-            this.name = '';
-            this.email = '';
-            this.phone = '';
-            this.comment = '';
-        },
+        name:    '',
+        phone:   '',
+        email:   '',
+        comment: '',
     };
 
     const name = document.querySelector('.fourthsection .form-wrapper .form .name');
@@ -39,10 +33,9 @@ export const fourthSectionFunction = () => {
         const target = (event.target) as HTMLInputElement;
         data.comment = target.value;
         target.value = data.comment;
-        console.log(data);
     });
 
-    btn?.addEventListener('click', (event) => {
+    form?.addEventListener('submit', (event) => {
         event.preventDefault();
         // fetch('https://fake.api.com', {
         //     method:  'POST',
@@ -50,7 +43,9 @@ export const fourthSectionFunction = () => {
         //         'Content-type': 'application/json',
         //     },
         //     body: JSON.stringify(data),
-        // });
+        // })
+        //     .then(() => console.log())
+        //     .finally(() => form.reset());
 
         setTimeout(() => {
             form.reset();
